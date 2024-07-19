@@ -22,7 +22,7 @@ export default function Register() {
   return (
     <>
       <TopNavbar path="register" />
-      <Box className=" mx-auto w-[50%] flex items-center justify-center">
+      <Box className=" mx-auto sm:w-[50%] w-full flex items-center justify-center">
         <RegisterForm />
       </Box>
     </>
