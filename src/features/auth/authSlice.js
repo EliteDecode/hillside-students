@@ -60,7 +60,6 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
 export const update = createAsyncThunk(
   "auth/upate",
   async (staff, thunkAPI) => {
-    console.log(staff);
     try {
       const staffId = thunkAPI.getState().auth.user.data.id;
       const token = thunkAPI.getState().auth.user.token;

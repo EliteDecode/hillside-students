@@ -25,7 +25,7 @@ const useApplicationIdForm = () => {
   const pdfRef = useRef();
 
   const { toPDF, targetRef } = usePDF({
-    filename: `id.pdf`,
+    filename: `${user?.data?.firstname}_${user?.data?.lastname}.pdf`,
   });
 
   const handlePreview = async () => {

@@ -104,7 +104,7 @@ const PreviewIdCard = ({
                                   </div>
                                   <div>
                                     <h5 className="text-[12px] text-[#5e0001]">
-                                      Sex
+                                      Gender
                                     </h5>
                                     <h6 className="font-semibold text-[13px] -mt-2">
                                       {user?.data?.sex}

@@ -52,7 +52,7 @@ const update = async (studentData, studentId, token) => {
     studentData,
     config
   );
-  console.log(response.data);
+  console.log(response);
 
   if (response.data) {
     localStorage.setItem("hust_student", JSON.stringify(response.data));
