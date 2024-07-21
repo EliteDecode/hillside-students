@@ -22,14 +22,15 @@ const IDForm = () => {
     loading,
     loader,
     setProfile,
-
+    toPDF,
     user,
     profile,
     setConfirm,
-    pdfRef,
+    targetRef,
     downloadPdf,
     handlePreview,
     confirm,
+    pdfRef,
   } = useApplicationIdForm();
 
   return (
@@ -310,7 +311,8 @@ const IDForm = () => {
         ) : (
           <>
             <PreviewIdCard
-              pdfRef={pdfRef}
+              targetRef={targetRef}
+              toPDF={toPDF}
               downloadPDF={downloadPdf}
               loader={loader}
               formik={formik}

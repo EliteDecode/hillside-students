@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://backend.hust.edu.ng/hust/api/v1/student";
+export const API_URL = "https://backend.hust.edu.ng/hust/api/v1/student";
 
 // export const API_URL = "http://localhost:5000/hust/api/v1/student";
 

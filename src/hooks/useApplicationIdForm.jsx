@@ -5,6 +5,7 @@ import { reset, update } from "../features/auth/authSlice";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { programs } from "../utils/infoData";
+import { usePDF } from "react-to-pdf";
 
 const useApplicationIdForm = () => {
   const [confirm, setConfirm] = useState(false);
@@ -18,13 +19,15 @@ const useApplicationIdForm = () => {
 
   const qrCode = `https://online.hust.edu.ng/OESWebApp/images/code/${user?.data?.qrcode}`;
   const img = `https://backend.hust.edu.ng/hust/api/v1/uploads/staffProfile/${user?.data?.profilePicture}`;
-  const pdfRef = useRef();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const pdfRef = useRef();
 
-  const downloadPdf = () => {
-    console.log("hello");
-  };
+  const { toPDF, targetRef } = usePDF({
+    filename: `id.pdf`,
+  });
+
   const handlePreview = async () => {
     setConfirm(!confirm);
   };
@@ -106,12 +109,13 @@ const useApplicationIdForm = () => {
     setConfirm,
     qrCode,
     img,
-    pdfRef,
-    downloadPdf,
+    targetRef,
+    toPDF,
     handlePreview,
     user,
     profile,
     confirm,
+    pdfRef,
   };
 };
 
