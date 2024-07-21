@@ -95,10 +95,9 @@ const PreviewIdCard = ({
                                     </h5>
                                     <h6 className="font-semibold text-[13px] -mt-2">
                                       {new Date(
-                                        user?.data?.year
+                                        user?.data?.dob
                                       ).toLocaleDateString("en-us", {
-                                        year: "numeric",
-                                        month: "numeric",
+                                        month: "short",
                                         day: "2-digit",
                                       })}
                                     </h6>
@@ -259,11 +258,11 @@ const PreviewIdCard = ({
                             <div className="absolute bottom-3 ">
                               <div className="flex items-center justify-center flex-col">
                                 <img
-                                  src={require("../../assets/img/vc_sign.png")}
+                                  src={require("../../assets/img/hrsign.jpg")}
                                   className="w-[55%]"
                                   alt=""
                                 />
-                                <h5 className="text-[15px] text-[#5e0001] font-semibold mt-2">
+                                <h5 className="text-[15px] text-[#5e0001] font-semibold">
                                   Registrar
                                 </h5>
                               </div>
