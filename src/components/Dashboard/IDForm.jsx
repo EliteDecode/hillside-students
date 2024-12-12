@@ -41,7 +41,7 @@ const IDForm = () => {
             <Card.Header> Student Access ID Card Applications</Card.Header>
             <Card.Body>
               <Card.Title className="font-bold text-[#5e0001]">
-                Fill out the form to request your staff access ID card.
+                Fill out the form to request your student access ID card.
               </Card.Title>
               {!confirm ? (
                 <Card.Text className="text-[12px]">
